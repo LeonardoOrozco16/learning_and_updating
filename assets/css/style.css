@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:100,300,400,600,700,800");
+@import url("https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap");
+/* Principal Color Pallet*/
+/* Principal Color Pallet*/
+/* Fonts */
+/* Fonts*/
+/*Languages*/
+/*Languages*/
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+body {
+  font-size: 16px;
+  background: linear-gradient(to bottom, #193549, #9d1799);
+}
+body h1, body .h1,
+body h2, body .h2,
+body h3, body .h3,
+body h4, body .h4,
+body h5, body .h5,
+body h6, body .h6 {
+  font-family: "Open Sans", sans-serif;
+  color: #f2f2f2;
+}
+body h1 > span, body .h1 > span,
+body h2 > span, body .h2 > span,
+body h3 > span, body .h3 > span,
+body h4 > span, body .h4 > span,
+body h5 > span, body .h5 > span,
+body h6 > span, body .h6 > span {
+  font-family: "Onest", sans-serif;
+}
+body h1 .thin, body .h1 .thin,
+body h2 .thin, body .h2 .thin,
+body h3 .thin, body .h3 .thin,
+body h4 .thin, body .h4 .thin,
+body h5 .thin, body .h5 .thin,
+body h6 .thin, body .h6 .thin {
+  font-weight: 100;
+}
+body h1, body .h1 {
+  font-size: 4rem;
+}
+body h2, body .h2 {
+  font-size: 2.5rem;
+}
+body h3, body .h3 {
+  font-size: 1.8rem;
+}
+body main {
+  padding: 2.5rem;
+}
+body #content-frame .content-note .note-block pre code {
+  position: relative;
+  border: 3px solid #ccc;
+  overflow: hidden;
+  border-radius: 10px;
+}
+body .svg-git > g {
+  stroke: #e84d31;
+}
+body .svg-github > g {
+  stroke: #5968ba;
+}
+
+*, *:after, :after, *:before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.globalframe {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.paddingless {
+  padding: 0 !important;
+}/*# sourceMappingURL=style.css.map */

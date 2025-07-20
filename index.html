@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apuntes - Cursos</title>
+    <link rel="stylesheet" href="vendor/highlight/styles/atom-one-dark.min.css">
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body>
+    <header class="container-fluid">
+        <div class="row globalframe justify-content-center">
+            <div class="col-lg-3">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <a href="#" target="_blank" class="logo">
+                            <span>
+                                <svg class="svg-git" xmlns="http://www.w3.org/2000/svg" width="8em" height="8em"
+                                    viewBox="0 0 24 24">
+                                    <g fill="none" stroke="black" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="1.5">
+                                        <path
+                                            d="M12 10a1.5 1.5 0 1 0 0-3a1.5 1.5 0 0 0 0 3m0 8a1.5 1.5 0 1 0 0-3a1.5 1.5 0 0 0 0 3m4.25-3.75a1.5 1.5 0 1 0 0-3a1.5 1.5 0 0 0 0 3M12 10v5M8.25 4.75L10.5 7m2.75 2.75l1.5 1.5" />
+                                        <path
+                                            d="M11.576 1.424a.6.6 0 0 1 .848 0l10.152 10.152a.6.6 0 0 1 0 .848L12.424 22.576a.6.6 0 0 1-.848 0L1.424 12.424a.6.6 0 0 1 0-.848z" />
+                                    </g>
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="col-lg-6">
+                        <a href="#" class="logo">
+                            <span>
+                                <svg class="svg-github" xmlns="http://www.w3.org/2000/svg" width="8em" height="8em"
+                                    viewBox="0 0 24 24">
+                                    <g fill="none" stroke="black" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="1.5">
+                                        <path
+                                            d="M16 22.027v-2.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7a5.44 5.44 0 0 0-1.5-3.75a5.07 5.07 0 0 0-.09-3.77s-1.18-.35-3.91 1.48a13.4 13.4 0 0 0-7 0c-2.73-1.83-3.91-1.48-3.91-1.48A5.07 5.07 0 0 0 5 5.797a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7a3.37 3.37 0 0 0-.94 2.58v2.87" />
+                                        <path d="M9 20.027c-3 .973-5.5 0-7-3" />
+                                    </g>
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <h1><span class="thin">Apuntes sobre: </span> Git y Github</h1>
+            </div>
+        </div>
+    </header>
+    <main id="content-frame" class="container-fluid">
+        <section class="row globalframe note-block">
+            <article class="note-block col-lg-8">
+                <div class="heading-note">
+                    <h3><span class="thin">Basicos</span></h3>
+                </div>
+                <div class="content-note row">
+                    <div class="note-block col-lg-6">
+                        <pre>
+                            <code>
+                            #Inicializa el repositorio
+                            git init
+                            #Verificar si hay cambios
+                            git status
+                            #Agrega archivos
+                            git add ruta_de_archivo
+                            #Agregar directorio
+                            git add ruta_de_directorio
+                            #Agregar todos
+                            git add .
+                            #Ver diferencias entre staged y local
+                            git diff
+                            #Remover todos los cambios de staged
+                            git reset HEAD
+                            #Remover el archivo del area de staging
+                            git reset HEAD ruta_de_archivo
+                            #Remover el tracking por parte de git
+                            git rm --cached ruta_de_archivo
+                            </code>
+                        </pre>
+                    </div>
+                    <div class="note-block col-lg-6">
+                        <pre>
+                            <code>
+                                #Agregar cambios al repositorio
+                                git commit -m &quot;Mensaje de commit&quot;
+                                #Agregar cambios a staging y guardar cambios
+                                git commit -a -m &quot;Mensaje de commit&quot;
+                                #Reparar el ultimo commit añadiendole cambios
+                                git commit --amend -m &quot;Mensaje de commit&quot;
+                                #Verificar historial de commits
+                                git log
+                                #Verificar cambios especificos del ultimo commit
+                                git log --stat
+                                #Verificar historial de commits de forma grafica
+                                git log --graph
+                                #historial grafico y detallado
+                                git log --all --graph --decorate --oneline
+                                #historial completo de acciones del repositorio
+                                git reflog
+                                #Abrir consola grafica del repositorio
+                                gitk --all
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+            </article>
+            <article class="note-block col-lg-4">
+                <div class="heading-note">
+                    <h3><span class="thin">Branchs / Ramas</span></h3>
+                </div>
+                <div class="content-note row">
+                    <div class="col note-block">
+                        <pre>
+                            <code>
+                                #Verificar en que rama estas trabajando
+                                git branch
+                                #Crear una nueva rama
+                                git branch nombre_de_rama
+                                #Renombrar una rama
+                                git branch -m nombre_de_rama nuevo_nombre_de_rama
+                                #Cambiar de rama
+                                git checkout nombre_de_rama
+                                #Crear una nueva rama y cambiar a ella
+                                git checkout -b nombre_de_rama
+                                #Restarurar archivos de un commit anterior
+                                git checkout nombre_de_commit -- archivo
+                                #Eliminar una rama
+                                git branch -d nombre_de_rama
+                                #Fusionar Ramas (Debe hacerse desde la rama base)
+                                git merge nombre_de_rama 
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+            </article>
+            <div class="w-100"></div>
+            <article class="note-block col-lg-8">
+                <div class="heading-note">
+                    <h3><span class="thin">Utiles</span></h3>
+                </div>
+                <div class="content-note row">
+                    <div class="note-block col">
+                        <pre>
+                        <code>
+                        #Versionar por tags
+                        git tag -a nombre-tag -m "mensaje" commit_hash
+                        #Ej: git tag -a V0.1 -m "Version para despliegue 0.1" 60b91c2
+                        #Listar tags
+                        git tag -l
+                        #Listar tag y sus referencias
+                        git show-ref --tags
+                        #Borrar un tag
+                        git tag -d nombre-tag
+                        #Borrar un tag en repositorio remoto
+                        git push repo_remoto :refs/tags/nombre-tag
+                        #Borrar archivos no deseados
+                        git clean --dry-run #lista todos los archivos no trackeados a borrar
+                        git clean -f #borra todos los archivos no trackeados
+
+                        #Los archivos agregados en el .gitignore no seran afectados por este comando
+                        #si se copia un directorio con archivos trackeados tampoco se vera afectado por este comando
+                        
+                        #Busqueda en archivos
+                        
+                        git grep "palabra" #Busca la palabra en todos los archivos
+                        git grep -n "palabra" #Retorna la linea del archivo esta lo que estamos buscando
+                        git grep -c "palabra" #Retorna cuantas veces se repite lo que buscamos y en que archivo
+                        
+                        //Busqueda de commits
+                        git log -S palabra (busca en los commits si usamos la palabra)
+                        </code>
+                    </pre>
+                    </div>
+                </div>
+            </article>
+            <article class="note-block col-lg-4">
+                <div class="heading-note">
+                    <h3><span class="thin">Repositorios Remotos & Stash</span></h3>
+                </div>
+                <div class="content-note row">
+                    <div class="col note-block">
+                        <pre>
+                            <code>
+                            #Clonar repositorio
+                            git clone url-repositorio
+                            #Añadir repositorio remoto HTTPS
+                            git remote add nombre-repositorio url-repositorio
+                            #Traer cambios de remoto a local
+                            git pull nombre-repositorio nombre-rama
+                            #De remoto a local sin histrias relacionadas
+                            git pull nombre-repositorio nombre-rama --allow-unrelated-histories
+                            #Hacer push de una rama a repo remoto
+                            git push repo_remoto nombre-rama
+
+                            #Uso de Stash
+
+                            #Guardar cambios de forma temporal#cambios flotantes
+                            git stash
+                            git stash save "Mensaje" #guardamos el stash con un mensaje
+                            git stash list #lista todos los stash que tengas
+                            git stash pop #trae el ultimo stash y lo integra a la rama
+                            git stash apply stash@{n} #trae el stash que necesites aplicando el numero dentro de las llaves y lo aplica a la rama
+                            git stash drop #borra el ultimo stash
+                            git stash clear #borra todos los stash
+                            git stash branch nombre_de_la_rama #Para colocar los cambios en una nueva rama
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+            </article>
+            <div class="w-100"></div>
+            <article class="note-block col">
+                <div class="heading-note">
+                    <h3><span class="thin">Practicas Delicadas</span></h3>
+                    <h4><span class="thin">(Pueden afectar la integridad del repositorio)</span></h4>
+                </div>
+                <div class="content-note row">
+                    <div class="col note-block">
+                        <pre>
+                            <code>
+                            #Deshacer el ultimo commit
+                            git reset --hard HEAD~1
+                            #Deshacer un commit especifico
+                            git reset --hard nombre_de_commit
+                            #Reescribir el historial de una rama
+                            git rebase -i nombre_de_rama
+                            #Tomar los cambios de un commit especificio e integrarlo a una rama
+                            git cherry-pick nombre_de_commit
+                            #Si por alguna razon quieres abortar la integracion de dicho commit
+                            git cherry-pick --abort
+                            #Ver estado anterior de archivos
+                            git checkout commit_hash archivo
+                            #Si se ejecuta un commit luego de este comando se perderan todos los cambios
+                            #posteriores de la rama
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+    </main>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="vendor/highlight/highlight.min.js"></script>
+    <script>
+        document.querySelectorAll('pre code').forEach((block) => {
+            // Eliminar espacios y tabulaciones iniciales en cada línea
+            block.innerHTML = block.innerHTML.trim().split('\n').map(line => line.trimStart()).join('\n');
+            // Aplicar resaltado de sintaxis
+            hljs.highlightBlock(block);
+        });
+    </script>
+</body>
+
+</html>
